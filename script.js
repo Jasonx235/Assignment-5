@@ -122,3 +122,14 @@ function setUncoloredGrid(){
     noColor.forEach(cell => { cell.style.backgroundColor = CurrentColor; cell.classList.remove("no-color")});
 
 }
+
+//Adding ability to fill all squares
+function setAllGrid(){
+    //saving all grid locations
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+
+    //setting color for uncolored squares
+    allCells.forEach(cell => { cell.style.backgroundColor = CurrentColor; cell.classList.remove("no-color")});
+
+}
