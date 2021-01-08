@@ -1,0 +1,16 @@
+body{
+    margin-top: 175px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+td{
+    height : 50px;
+    width: 50px;
+    background-color: black;
+}
