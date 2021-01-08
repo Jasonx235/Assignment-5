@@ -11,7 +11,8 @@ function addRow(){
     for(let i = 0; i < numCol; i++){
         //creating new cell
         let newCell = document.createElement("td");
-        
+        gridInteraction(newCell);
+        newCell.classList.add("no-color");
         //adding cell to row
         newRow.appendChild(newCell);
     }
@@ -33,8 +34,11 @@ function addCol(){
         //creating new cell
         let newCell = document.createElement("td");
 
+        gridInteraction(newCell); 
+
         //adding cell to col
         rows[counter].appendChild(newCell);
+
         counter++;
     }
     numCol++;
@@ -69,4 +73,35 @@ function removeCol(){
         counter++;
     }
     numCol--;
+}
+
+//Adding coloring
+let CurrentColor = document.getElementById("color").value;
+
+console.log(CurrentColor);
+
+function gridInteraction(cell){
+    //change color after click
+    cell.addEventListener("click", settingColor)
+
+    //if not color selected add no-color class
+    cell.classList.add("no-color");
+}
+
+//Adding functionality to starting cell
+let startCell = document.getElementsByTagName("td");
+let startCellList = [...startCell];
+
+for(let i =0; i <startCellList.length;i++){
+    let cell = startCellList[i];
+    gridInteraction(cell);
+}
+
+function settingColor(){
+    this.style.backgroundColor = CurrentColor;
+    this.classList.remove("no-color")
+}
+
+function setColor(color){
+    CurrentColor = color;
 }
