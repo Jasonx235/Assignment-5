@@ -51,3 +51,22 @@ function removeRow(){
     //decrement total num
     numRow--;
 }
+
+
+//Adding remove Col functionality
+function removeCol(){
+
+    //accessing main
+    let removeC = document.querySelector("#main-grid");
+
+    //Accessing Rows
+    let rows = document.querySelectorAll("tr");
+
+    let counter = 0;
+
+    for(let i = 0; i < numRow; i++){
+        rows[counter].removeChild(rows[counter].lastChild);
+        counter++;
+    }
+    numCol--;
+}
