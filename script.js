@@ -133,3 +133,14 @@ function setAllGrid(){
     allCells.forEach(cell => { cell.style.backgroundColor = CurrentColor; cell.classList.remove("no-color")});
 
 }
+
+//Adding function to clear all colors
+function clearAllGrid(){
+    //saving all grid locations
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+
+    //setting color for uncolored squares
+    allCells.forEach(cell => { cell.style.backgroundColor = "black"; cell.classList.add("no-color")});
+
+}
