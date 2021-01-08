@@ -1,5 +1,6 @@
 let numRow = 1;
 let numCol = 1;
+let hoverColor =false;
 
 
 //First feature to add rows
@@ -87,6 +88,25 @@ function gridInteraction(cell){
 
     //if not color selected add no-color class by default
     cell.classList.add("no-color");
+
+
+    //Adding hover functionality
+    cell.addEventListener("mousedown", element =>{ hoverColor = true;});
+
+    cell.addEventListener("mousemove", element => {
+        if(hoverColor){
+            cell.style.backgroundColor = CurrentColor;
+            cell.classList.remove("no-color");
+        }
+    });
+
+    cell.addEventListener("mouseup", element =>{
+        if(hoverColor){
+            hoverColor = false;
+        }
+    });
+
+
 }
 
 //Adding functionality to starting cell
