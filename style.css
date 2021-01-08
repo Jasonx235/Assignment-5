@@ -41,5 +41,8 @@ td{
 }
 
 .setMargin{
-    margin: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 }

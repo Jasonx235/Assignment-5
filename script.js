@@ -107,3 +107,18 @@ function settingColor(){
 function setColor(color){
     CurrentColor = color;
 }
+
+
+//Adding ability to fill all uncolored squares with current color
+function setUncoloredGrid(){
+    //saving all grid locations
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+
+    //filter out colored grids
+    let noColor = allCells.filter(cell => {return cell.classList.contains("no-color")});
+
+    //setting color for uncolored squares
+    noColor.forEach(cell => { cell.style.backgroundColor = CurrentColor; cell.classList.remove("no-color")});
+
+}
