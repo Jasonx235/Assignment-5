@@ -19,9 +19,18 @@
         <div class = "setMargin">
         <button type="button"class="myButton" onclick="removeRow()">Remove Row</button>
         </div>
-        <div class = "setMargin">
+        <form class= "setMargin">
             <button type="button"class="myButton" onclick="removeCol()">Remove Column</button>
-            </div>
+        </form>
+        <div class = "setMargin">
+            <select class="myButton" id="color" onchange="setColor(this.value)">
+                <option value="#3A81F1">Blue</option>
+                <option value="#2DA94F">Green</option>
+                <option value="#FDBD00">Yellow</option>
+                <option value="#EA4335">Red</option>
+                <option value="#5F6368">Grey</option>
+            </select>
+        </div>
     </div>
     <div class="container">
         
