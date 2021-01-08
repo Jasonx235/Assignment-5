@@ -11,8 +11,10 @@ function addRow(){
     for(let i = 0; i < numCol; i++){
         //creating new cell
         let newCell = document.createElement("td");
+
+        //adding event handler new rows
         gridInteraction(newCell);
-        newCell.classList.add("no-color");
+
         //adding cell to row
         newRow.appendChild(newCell);
     }
@@ -34,6 +36,7 @@ function addCol(){
         //creating new cell
         let newCell = document.createElement("td");
 
+        // adding event handler to new cols
         gridInteraction(newCell); 
 
         //adding cell to col
@@ -75,16 +78,14 @@ function removeCol(){
     numCol--;
 }
 
-//Adding coloring
+//Adding coloring on click
 let CurrentColor = document.getElementById("color").value;
-
-console.log(CurrentColor);
 
 function gridInteraction(cell){
     //change color after click
     cell.addEventListener("click", settingColor)
 
-    //if not color selected add no-color class
+    //if not color selected add no-color class by default
     cell.classList.add("no-color");
 }
 
@@ -93,15 +94,16 @@ let startCell = document.getElementsByTagName("td");
 let startCellList = [...startCell];
 
 for(let i =0; i <startCellList.length;i++){
-    let cell = startCellList[i];
-    gridInteraction(cell);
+    gridInteraction(startCellList[i]);
 }
 
+//Setting background of grid
 function settingColor(){
     this.style.backgroundColor = CurrentColor;
     this.classList.remove("no-color")
 }
 
+//Updating color option when user changes it
 function setColor(color){
     CurrentColor = color;
 }
