@@ -20,3 +20,23 @@ function addRow(){
     main.appendChild(newRow);
     numRow++;
 }
+
+//Second feature to add columns
+function addCol(){
+    let main = document.querySelector("#main-grid");
+
+    let rows = document.querySelectorAll("tr");
+
+    let counter = 0;
+
+    for(let i =0; i< numRow;i++){
+        //creating new cell
+        let newCell = document.createElement("td");
+
+        //adding cell to col
+        rows[counter].appendChild(newCell);
+        counter++;
+    }
+    numCol++;
+
+}
