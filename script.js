@@ -40,3 +40,14 @@ function addCol(){
     numCol++;
 
 }
+
+//Adding Remove Row functionality
+function removeRow(){
+
+    //accessing main
+    let removeR = document.querySelector("#main-grid");
+    //removing row
+    removeR.deleteRow(numRow-1);
+    //decrement total num
+    numRow--;
+}
