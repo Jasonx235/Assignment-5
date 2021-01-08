@@ -12,7 +12,8 @@ body{
 td{
     height : 50px;
     width: 50px;
-    background-color: black;
+	background-color: black;
+	border-radius: 8px;
 }
 
 .myButton {
@@ -29,7 +30,7 @@ td{
 	font-weight:bold;
 	padding:7px 15px;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #ffffff;
+	text-shadow:0px 1px 0px #ffffff;
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);

@@ -2,6 +2,13 @@ let numRow = 1;
 let numCol = 1;
 let hoverColor =false;
 
+//Adding functionality to starting cell
+let startCell = document.getElementsByTagName("td");
+let startCellList = [...startCell];
+
+for(let i =0; i <startCellList.length;i++){
+    gridInteraction(startCellList[i]);
+}
 
 //First feature to add rows
 function addRow(){
@@ -107,14 +114,6 @@ function gridInteraction(cell){
     });
 
 
-}
-
-//Adding functionality to starting cell
-let startCell = document.getElementsByTagName("td");
-let startCellList = [...startCell];
-
-for(let i =0; i <startCellList.length;i++){
-    gridInteraction(startCellList[i]);
 }
 
 //Setting background of grid
